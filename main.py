@@ -1,10 +1,4 @@
-from fastapi import FastAPI
-import gorjeta_Fuzzy
+import uvicorn
 
-app = FastAPI() #uvicorn main:app --reload
-
-#Nessa rota - executa função home
-@app.post("/gorjeta")
-def home(servico: int, qualidade: int): #Faz a validação da variavel
-
-    return {"gorjeta": gorjeta_Fuzzy.gorjeta(servico, qualidade)}
+if __name__ == "__main__":
+    uvicorn.run("app:app", host="0.0.0.0", port=7999, reload=True)
