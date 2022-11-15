@@ -1,6 +1,7 @@
 import numpy as np
 import skfuzzy as fuzzy
 import skfuzzy.control as control
+import matplotlib.pyplot as plt
 
 def gorjeta(serv, qual):
     universo = np.arange(0, 11)
