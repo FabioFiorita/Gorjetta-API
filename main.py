@@ -7,4 +7,4 @@ app = FastAPI() #uvicorn main:app --reload
 @app.post("/gorjeta")
 def home(servico: int, qualidade: int): #Faz a validação da variavel
 
-    return {"Gorjeta": gorjeta_Fuzzy.gorjeta(servico, qualidade)}
+    return {"gorjeta": gorjeta_Fuzzy.gorjeta(servico, qualidade)}
