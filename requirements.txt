@@ -1,0 +1,5 @@
+fastapi==0.87.0
+matplotlib==3.4.3
+numpy==1.21.1
+scikit_fuzzy==0.4.2
+gunicorn==20.1.0
