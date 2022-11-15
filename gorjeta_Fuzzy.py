@@ -1,31 +1,32 @@
-import numpy as np
-import skfuzzy as fuzzy
-import skfuzzy.control as control
+from numpy import arange
+#import skfuzzy as fuzzy
+from skfuzzy import trapmf, trimf, control
+#import skfuzzy.control as control
 
 def gorjeta(serv, qual):
-    universo = np.arange(0, 11)
+    universo = arange(0, 11)
 
     qualidade = control.Antecedent(universe=universo, label="qualidade")
     servico = control.Antecedent(universe=universo, label="servico")
 
     # Criando função de pertinência triangular -> trimf, trapezoidal -> trapmf
-    qualidade["ruim"] = fuzzy.trapmf(qualidade.universe, [0, 0, 2, 5])
-    qualidade["bom"] = fuzzy.trimf(qualidade.universe, [3, 5, 7])
-    qualidade["excelente"] = fuzzy.trapmf(qualidade.universe, [5, 8, 10, 10])
+    qualidade["ruim"] = trapmf(qualidade.universe, [0, 0, 2, 5])
+    qualidade["bom"] = trimf(qualidade.universe, [3, 5, 7])
+    qualidade["excelente"] = trapmf(qualidade.universe, [5, 8, 10, 10])
 
-    servico["ruim"] = fuzzy.trapmf(servico.universe, [0, 0, 2, 5])
-    servico["bom"] = fuzzy.trimf(servico.universe, [3, 5, 7])
-    servico["excelente"] = fuzzy.trapmf(servico.universe, [5, 8, 10, 10])
+    servico["ruim"] = trapmf(servico.universe, [0, 0, 2, 5])
+    servico["bom"] = trimf(servico.universe, [3, 5, 7])
+    servico["excelente"] = trapmf(servico.universe, [5, 8, 10, 10])
     # qualidade.view()
     # servico.view()
 
-    universo_gorjeta = np.arange(0, 21)
+    universo_gorjeta = arange(0, 21)
 
     gorjeta = control.Consequent(universe=universo_gorjeta, label="gorjeta")
 
-    gorjeta["pequena"] = fuzzy.trapmf(gorjeta.universe, [0, 0, 5, 8])
-    gorjeta["razoável"] = fuzzy.trimf(gorjeta.universe, [5, 10, 15])
-    gorjeta["generosa"] = fuzzy.trapmf(gorjeta.universe, [10, 15, 20, 20])
+    gorjeta["pequena"] = trapmf(gorjeta.universe, [0, 0, 5, 8])
+    gorjeta["razoável"] = trimf(gorjeta.universe, [5, 10, 15])
+    gorjeta["generosa"] = trapmf(gorjeta.universe, [10, 15, 20, 20])
 
     regra1 = control.Rule(servico["ruim"] | qualidade["ruim"], gorjeta["pequena"])
     regra2 = control.Rule(servico["bom"], gorjeta["razoável"])
