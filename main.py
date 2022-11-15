@@ -17,8 +17,15 @@ app.add_middleware(
     expose_headers=["*"],
 )
 
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
+
 # Nessa rota - executa função home
 @ app.post("/gorjeta")
 def home(servico: int, comida: int):  # Faz a validação da variavel
     
     return {"gorjeta": gorjeta_Fuzzy.gorjeta(servico, comida)}
+
+# Para rodar o servidor
+# uvicorn main:app --reload
