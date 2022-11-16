@@ -61,7 +61,7 @@ pytest
 
 ## 💻 Como Rodar
 
-- [x] Cálculo de gorjeta
+- Cálculo de gorjeta
 ```bash
 http://127.0.0.1:8000/gorjeta?servico=8&qualidade=10
 ```
