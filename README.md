@@ -22,7 +22,7 @@ Backend em Python da aplicação Gorjeta
 - [Gabriel Cardoso](https://github.com/Gabriel-GCS)
 
 ## 🖥️ Frontend
-Todo o código desenvolvido para o backend da aplicação está disponível no repositório [Gorjetta](https://github.com/FabioFiorita/Gorjetta)
+Todo o código desenvolvido para o frontend da aplicação está disponível no repositório [Gorjetta](https://github.com/FabioFiorita/Gorjetta)
 
 ## 🎯 Funcionalidades
  - [x] - Cálculo de gorjeta utilizando a lógica fuzzy 
