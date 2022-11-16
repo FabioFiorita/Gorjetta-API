@@ -24,4 +24,4 @@ def home(servico: int, qualidade: int):  # Faz a validação da variavel
     return {"gorjeta": gorjeta_Fuzzy.gorjeta(servico, qualidade)}
 
 # Para rodar o servidor
-# uvicorn main:app --reload
+# uvicorn app:app --reload
