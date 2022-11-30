@@ -34,7 +34,7 @@ Todo o código desenvolvido para o frontend da aplicação está disponível no 
  - [Python](https://www.python.org/)
 
 
-## ⚙️ Instale antes de tentar executar os projetos)
+## ⚙️ Instale antes de tentar executar os projetos
  - [Python](https://www.python.org/downloads/)
 
 ## 🚀️ Executando os projetos
