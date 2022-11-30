@@ -1,5 +1,5 @@
 # Gorjetta-API
-Backend em Python da aplicação Gorjeta
+Backend em Python da aplicação Gorjetta
 
 [![Python application](https://github.com/FabioFiorita/Gorjetta-API/actions/workflows/python-app.yml/badge.svg?branch=master)](https://github.com/FabioFiorita/Gorjetta-API/actions/workflows/python-app.yml)
 
