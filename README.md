@@ -1,5 +1,6 @@
 # Gorjetta-API
 Backend em Python da aplicação Gorjetta
+<img src="https://raw.githubusercontent.com/FabioFiorita/Gorjetta-API/master/screenshots/fastapi.gif#vitrinedev" alt="FastAPI GIF">
 
 [![Python application](https://github.com/FabioFiorita/Gorjetta-API/actions/workflows/python-app.yml/badge.svg?branch=master)](https://github.com/FabioFiorita/Gorjetta-API/actions/workflows/python-app.yml)
 
